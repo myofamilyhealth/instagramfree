@@ -86,6 +86,10 @@ function openSection(s) {
   lastFocused = document.activeElement;
   modalTitle.textContent = s.title;
 
+  // Log which guide was opened (privacy-friendly event, no personal data)
+  const slug = s.pdf.split("/").pop().replace(".pdf", "");
+  if (window.trackGuideOpen) window.trackGuideOpen(slug, s.title);
+
   if (s.ready && s.pdf) {
     modalBody.innerHTML = `
       <iframe src="${s.pdf}#view=FitH" title="${s.title}" loading="lazy"></iframe>

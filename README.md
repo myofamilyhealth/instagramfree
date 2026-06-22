@@ -41,6 +41,28 @@ This is a static site — host it free on **GitHub Pages**:
 
 (`.nojekyll` is included so GitHub Pages serves all files as-is.)
 
+## Visitor analytics (private)
+
+The site can track how many people view it, using **GoatCounter** —
+privacy-friendly, cookieless, no consent banner needed.
+
+**One-time setup:**
+1. Create a free account at https://www.goatcounter.com and pick a *code*
+   (subdomain), e.g. `myofamilyhealth`.
+2. Open `analytics.js` and set: `window.GC_CODE = "myofamilyhealth";`
+3. In GoatCounter → **Settings → Site settings**, tick **"Allow visitor counts"**.
+4. Commit & push. Tracking turns on automatically.
+
+**Where to see numbers:**
+- **Full dashboard (private, login-protected):** `https://<code>.goatcounter.com`
+- **Quick hidden page on the site:** `/stats.html`
+  (e.g. `https://rondoninathan-hash.github.io/instagramfree/stats.html`) —
+  shows total views + how many times each guide was opened. It's not linked
+  anywhere, but a secret URL is *obscurity, not security*; the GoatCounter
+  dashboard is the truly private view.
+
+Leaving `GC_CODE` empty keeps analytics fully off.
+
 ## Branding
 
 Colors are sampled from the Myo Family Health logo (soft teal `#7BAFB2`,

@@ -16,7 +16,7 @@
         https://<code>.goatcounter.com
    ============================================================ */
 
-window.GC_CODE = "";   // <-- put your GoatCounter code here
+window.GC_CODE = "nathanrondoni";   // <-- put your GoatCounter code here
 
 (function () {
   var code = window.GC_CODE;

@@ -59,8 +59,18 @@ const ICONS = {
 const sectionsEl = document.getElementById("sections");
 
 SECTIONS.forEach((s, i) => {
-  const card = document.createElement("button");
-  card.type = "button";
+  const ready = s.ready && s.pdf;
+
+  // Ready guides are real links that go STRAIGHT to the PDF (new tab).
+  // Not-yet-ready guides stay as a button that shows the "Coming soon" note.
+  const card = document.createElement(ready ? "a" : "button");
+  if (ready) {
+    card.href = s.pdf;
+    card.target = "_blank";
+    card.rel = "noopener";
+  } else {
+    card.type = "button";
+  }
   card.className = "card";
   card.setAttribute("aria-label", `Open: ${s.title}`);
   card.innerHTML = `
@@ -72,7 +82,15 @@ SECTIONS.forEach((s, i) => {
     </span>
     <span class="card__cta">${ICONS.arrow}</span>
   `;
-  card.addEventListener("click", () => openSection(s));
+  if (ready) {
+    // Let the link open the PDF; just log the open event on the way.
+    const slug = s.pdf.split("/").pop().replace(".pdf", "");
+    card.addEventListener("click", () => {
+      if (window.trackGuideOpen) window.trackGuideOpen(slug, s.title);
+    });
+  } else {
+    card.addEventListener("click", () => openSection(s));
+  }
   sectionsEl.appendChild(card);
 });
 

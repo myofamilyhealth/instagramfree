@@ -50,16 +50,12 @@ privacy-friendly, cookieless, no consent banner needed.
 1. Create a free account at https://www.goatcounter.com and pick a *code*
    (subdomain), e.g. `myofamilyhealth`.
 2. Open `analytics.js` and set: `window.GC_CODE = "myofamilyhealth";`
-3. In GoatCounter → **Settings → Site settings**, tick **"Allow visitor counts"**.
-4. Commit & push. Tracking turns on automatically.
+3. Commit & push. Tracking turns on automatically.
 
 **Where to see numbers:**
-- **Full dashboard (private, login-protected):** `https://<code>.goatcounter.com`
-- **Quick hidden page on the site:** `/stats.html`
-  (e.g. `https://rondoninathan-hash.github.io/instagramfree/stats.html`) —
-  shows total views + how many times each guide was opened. It's not linked
-  anywhere, but a secret URL is *obscurity, not security*; the GoatCounter
-  dashboard is the truly private view.
+- **Private dashboard (login-protected):** `https://<code>.goatcounter.com` —
+  views over time, referrers, countries, and how many times each guide was
+  opened.
 
 Leaving `GC_CODE` empty keeps analytics fully off.
 

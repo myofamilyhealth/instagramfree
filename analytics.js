@@ -8,11 +8,8 @@
 
         window.GC_CODE = "myofamilyhealth";
 
-   3. In GoatCounter → Settings → "Site settings", tick
-      "Allow visitor counts" (needed for the /stats page).
-
    That's it. Leave it as "" to keep analytics off.
-   Your private dashboard lives at:
+   View your numbers on your private dashboard at:
         https://<code>.goatcounter.com
    ============================================================ */
 
@@ -24,10 +21,6 @@ window.GC_CODE = "nathanrondoni";   // <-- put your GoatCounter code here
 
   window.goatcounter = window.goatcounter || {};
   window.goatcounter.endpoint = "https://" + code + ".goatcounter.com/count";
-
-  // Pages that set GC_NO_COUNT (e.g. the private stats page) are not
-  // counted, so your own checking doesn't inflate the numbers.
-  if (window.GC_NO_COUNT) window.goatcounter.no_onload = true;
 
   var s = document.createElement("script");
   s.async = true;

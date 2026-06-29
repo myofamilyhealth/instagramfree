@@ -36,7 +36,7 @@ This is a static site — host it free on **GitHub Pages**:
 
 1. Repo **Settings → Pages → Build and deployment**.
 2. Source: **Deploy from a branch** → branch `main` (or the deploy branch) → `/ (root)`.
-3. GitHub gives you a URL like `https://<user>.github.io/instagramfree/`.
+3. GitHub gives you a URL like `https://<user>.github.io/<repo-name>/`.
 4. Paste that URL into the Instagram bio link.
 
 (`.nojekyll` is included so GitHub Pages serves all files as-is.)

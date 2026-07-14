@@ -87,6 +87,12 @@ body {
   letter-spacing: 0.01em;
   color: var(--teal-deep);
 }
+.brand__hint {
+  margin-top: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal);
+}
 
 /* ---------- Sections (4 cards) ---------- */
 .sections {

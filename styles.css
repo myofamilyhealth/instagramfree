@@ -87,12 +87,6 @@ body {
   letter-spacing: 0.01em;
   color: var(--teal-deep);
 }
-.brand__hint {
-  margin-top: 7px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--teal);
-}
 
 /* ---------- Sections (4 cards) ---------- */
 .sections {
@@ -170,21 +164,6 @@ body {
   background: var(--mint);
   border-radius: var(--r-pill);
   padding: 3px 10px;
-}
-
-/* ---------- Email signup (Brevo iframe) ---------- */
-.signup {
-  margin-top: 18px;
-}
-.signup__frame {
-  width: 100%;
-  height: 430px;
-  border: none;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  background: #fff;
-  box-shadow: var(--sh-sm);
-  display: block;
 }
 
 /* ---------- Footer ---------- */
